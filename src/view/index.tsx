@@ -1,9 +1,10 @@
 import { useEffect } from 'react'
-import { useUI } from '@sentre/senhub'
+import { net, useUI } from '@sentre/senhub'
 
 import EmbededView from '@sentre/embeded-view'
 
 import configs from 'configs'
+import MainnetOnly from './mainnetOnly'
 
 const {
   manifest: { appId },
@@ -16,6 +17,7 @@ const View = () => {
     setBackground({ light: '#0f1118', dark: '#0f1118' })
   }, [setBackground])
 
+  if (net !== 'mainnet') return <MainnetOnly />
   return (
     <EmbededView
       appId={appId}
