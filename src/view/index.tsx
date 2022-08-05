@@ -1,9 +1,9 @@
+import { useEffect } from 'react'
 import { useUI } from '@sentre/senhub'
 
 import EmbededView from '@sentre/embeded-view'
 
 import configs from 'configs'
-import { useEffect } from 'react'
 
 const {
   manifest: { appId },
